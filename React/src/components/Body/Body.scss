@@ -1,0 +1,19 @@
+section.body {
+  min-height: 70vh;
+}
+
+.login-container {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 450px;
+  background-color: #dddee5;
+  padding: 30px;
+  box-shadow: 6px 6px 5px 1px rgb(0 0 0 / 81%);
+  text-align: center;
+
+  h3 {
+    color: #252a32;
+    font-weight: 500;
+  }
+}
