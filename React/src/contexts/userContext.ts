@@ -5,7 +5,8 @@ export const defaultUser: User = {
   id: "",
   full_name: "",
   sdk_id: "",
-  active: false
+  active: false,
+  email: ""
 }
 
 export const UserContext = React.createContext({

@@ -1,17 +1,18 @@
 export interface User {
-  id: String;
-  first_name?: String;
-  last_name?: String;
-  full_name: String;
-  picture?: String;
-  sdk_id: String;
+  id: string;
+  first_name?: string;
+  last_name?: string;
+  full_name: string;
+  picture?: string;
+  sdk_id: string;
   active: Boolean;
+  email: string;
 }
 
 export interface SDK {
-  getSDKId: () => String;
-  initialise: () => void;
-  getUser: () => User;
-  logIn: () => User;
+  getSDKId: () => string;
+  initialise: () => Promise<void>;
+  getUser: () => Promise<User>;
+  logIn: () => Promise<User>;
   logOut: () => void;
 }

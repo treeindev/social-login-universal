@@ -7,8 +7,9 @@ interface iLoginButton {
 
 const LoginButton: React.FC<iLoginButton> = ({ callback, SDKId }) => {
   return (
-    <button onClick={()=>callback(SDKId)} className="loginBtn loginBtn--facebook">
-      Login with Facebook
+    <button onClick={()=>callback(SDKId)} className={"loginBtn loginBtn--"+SDKId}>
+      Login with {SDKId}
+      {SDKId === "google" && <div id="GoogleLoginButton"></div>}
     </button>
   );
 }

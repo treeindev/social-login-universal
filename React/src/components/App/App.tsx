@@ -16,9 +16,7 @@ function App() {
 
   const onLogin = async (SDKId: String) => {
     setLoading(true);
-    setUser(
-      await universalLogin.login(SDKId)
-    );
+    setUser(await universalLogin.login(SDKId));
     setLoading(false);
   }
 
