@@ -77,7 +77,18 @@ class GoogleSDK implements SDK {
 
   public async getUser(): Promise<User> {
     return new Promise((resolve, reject) => {
-      resolve(defaultUser);
+      if (this.profile) {
+        resolve({
+          id: this.profile.sub,
+          full_name: this.profile.name,
+          sdk_id: this.id,
+          active: true,
+          email: this.profile.email,
+          picture: this.profile.picture
+        });
+      } else {
+        resolve(defaultUser);
+      }
     });
   }
 

@@ -18,7 +18,7 @@ const Body: React.FC<iBody> = ({onLogin}) => {
         <h3>Welcome, {!user.active ? "please login with your social account" : user.full_name}.</h3>
         {!user.active && <div>
           <LoginButton callback={onLogin} SDKId="facebook" />
-          <LoginButton callback={onLogin} SDKId="twitter" />
+          <LoginButton callback={onLogin} SDKId="google" />
         </div>}
         {user.active && <div><img src={user.picture} /></div>}
       </div>
