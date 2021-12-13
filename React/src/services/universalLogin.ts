@@ -3,6 +3,7 @@ import { SDK, User } from "../models/interfaces";
 import { localStorageService } from "./localStorage";
 import { facebookSDK } from "./SDKs/FacebookSDK";
 import { googleSDK } from "./SDKs/GoogleSDK";
+import { linkedinSDK } from "./SDKs/LinkedinSDK";
 
 export class UniversalLogin {
   private SDKs: Map<String, SDK> = new Map();
@@ -10,6 +11,7 @@ export class UniversalLogin {
   constructor() {
     this.SDKs.set(facebookSDK.getSDKId(), facebookSDK);
     this.SDKs.set(googleSDK.getSDKId(), googleSDK);
+    this.SDKs.set(linkedinSDK.getSDKId(), linkedinSDK);
   }
 
   public getUser(): Promise<User> {

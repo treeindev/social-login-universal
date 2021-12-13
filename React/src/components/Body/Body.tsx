@@ -19,6 +19,7 @@ const Body: React.FC<iBody> = ({onLogin}) => {
         {!user.active && <div>
           <LoginButton callback={onLogin} SDKId="facebook" />
           <LoginButton callback={onLogin} SDKId="google" />
+          <LoginButton callback={onLogin} SDKId="linkedin" />
         </div>}
         {user.active && <div><img src={user.picture} /></div>}
       </div>
