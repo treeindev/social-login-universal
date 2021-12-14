@@ -1,5 +1,5 @@
 class Utilities {
-  public parse(search: string): any {
+  public parseURL(search: string): any {
     const query = search.substring(1);
     const vars = query.split('&');
     const parsed: any = {};

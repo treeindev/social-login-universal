@@ -17,7 +17,7 @@ function LinkedinSDKCallback() {
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   useEffect(() => {
-    const params: ParamsType = utilities.parse(window.location.search);
+    const params: ParamsType = utilities.parseURL(window.location.search);
     if (params.state !== localStorage.getItem(LINKEDIN_SDK_STORAGE_KEY)) {
       setErrorMessage('State does not match');
     } else if (params.error) {

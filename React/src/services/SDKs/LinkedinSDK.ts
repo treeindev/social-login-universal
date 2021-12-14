@@ -69,7 +69,7 @@ class LinkedinSDK implements SDK {
 
       // Subscribe to user code subject, this will execute after user completes login process.
       this.userCodeSubject.subscribe(async (code: string) => {
-        console.log("token response", code);
+        console.log("This is the user token: ", code);
         // CORS is not supported for LinkedIn API from a frontend Javascript app.
         // This requires a backend implementation.
       });
@@ -100,8 +100,6 @@ class LinkedinSDK implements SDK {
         // TODO: Implement better UX for errors
         console.error("There has been an error on Linkedin SDK", event.data.errorMessage);
       }
-
-      console.log("testin scope", this.id);
 
       this.userCodeSubject.next(event.data.code);
       this.popup?.close();
